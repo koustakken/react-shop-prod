@@ -1,26 +1,22 @@
-import { classNames } from "@/shared/lib/classNames/classNames"
-import { ThemeSwitcher } from "@/widgets/ThemeSwitcher";
-import { LangSwitcher } from "@/widgets/LangSwitcher";
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher'
+import { LangSwitcher } from '@/widgets/LangSwitcher'
 
 import styles from './Header.module.scss'
 
 interface HeaderProps {
-    className?: string;
+  className?: string
 }
 
-export const Header = (
-    {
-        className,
-    } : HeaderProps
-) => {
-    return (
-        <div className={classNames(styles.root, {}, [className])}>
-            <span>React App</span>
-            <div className={styles.right}>
-                <input type="text" />
-                <ThemeSwitcher />
-                <LangSwitcher />
-            </div>
-        </div>
-    )
+export const Header = ({ className }: HeaderProps) => {
+  return (
+    <div className={classNames(styles.root, {}, [className])}>
+      <span>React App</span>
+      <div className={styles.right}>
+        <input type="text" />
+        <ThemeSwitcher />
+        <LangSwitcher />
+      </div>
+    </div>
+  )
 }
