@@ -1,0 +1,17 @@
+.root {
+    width: 100%;
+    height: var(--header-height);
+    border-bottom: 1px solid var(--border-default);
+    background-color: var(--inverted-bg-color);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

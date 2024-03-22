@@ -1,0 +1,10 @@
+.AppLink {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 5px 10px;
+  font-size: var(--font-size-s);
+  &:hover {
+    background-color: var(--inverted-bg-color);
+    border-radius: 5px;
+  }
+}
