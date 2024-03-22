@@ -1,4 +1,5 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
+import { ThemeSwitcher } from "@/widgets/ThemeSwitcher";
 
 import styles from './Header.module.scss'
 
@@ -14,9 +15,9 @@ export const Header = (
     return (
         <div className={classNames(styles.root, {}, [className])}>
             <span>React App</span>
-            <div>
+            <div className={styles.right}>
                 <input type="text" />
-                <button>Toggle</button>
+                <ThemeSwitcher />
             </div>
         </div>
     )
