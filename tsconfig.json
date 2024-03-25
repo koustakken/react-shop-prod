@@ -2,8 +2,8 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "module": "esnext",
-        "target": "es5",
+        "module": "esn6",
+        "target": "es6",
         "jsx": "react-jsx",
         "allowJs": true,
         "moduleResolution": "node",
@@ -26,6 +26,8 @@
         }
       },
     "include": [
-        "./config/jest/setupTests.ts"
+        "./config/jest/setupTests.ts",
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
     ],
 }
