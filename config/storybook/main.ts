@@ -20,20 +20,14 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
   webpackFinal: async (config) => {
-    if (
-      config.resolve &&
-      config.resolve.alias &&
-      path &&
-      config.module &&
-      config.module.rules
-    ) {
-      config.resolve.alias['@'] = path.resolve(__dirname, '../../src')
-      config.module.rules.push({
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.resolve(__dirname, '../src'),
-      })
-    }
+    // TODO поправить выглядит тупо
+    (config as any).resolve.alias['@'] = path.resolve(__dirname, '../../src')
+
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../src'),
+    })
     return config
   },
 }
