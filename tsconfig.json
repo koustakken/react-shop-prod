@@ -2,8 +2,8 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "module": "esn6",
-        "target": "es6",
+        "module": "esnext",
+        "target": "es5",
         "jsx": "react-jsx",
         "allowJs": true,
         "moduleResolution": "node",
