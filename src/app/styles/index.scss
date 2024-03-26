@@ -1,15 +1,13 @@
-@import './variables/global.scss';
-@import './themes/light.scss';
-@import './themes/dark.scss';
-@import './reset.scss';
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import './variables/global';
+@import './themes/light';
+@import './themes/dark';
+@import './reset';
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap';
 
 .app {
   font-family: var(--font-family-main);
   font-size: var(--font-size-m);
   line-height: var(--font-line-m);
-
   background: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;

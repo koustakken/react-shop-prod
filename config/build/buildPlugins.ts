@@ -1,26 +1,37 @@
-import webpack from 'webpack'
+import {
+  WebpackPluginInstance,
+  ProgressPlugin,
+  DefinePlugin,
+  HotModuleReplacementPlugin
+} from 'webpack'
 import { BuildOptions } from './types/config'
 
-import htmlWebpackPlugin from 'html-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import { BundleAnalyzerPlugin} from 'webpack-bundle-analyzer'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
-    new htmlWebpackPlugin({
-      template: paths.html,
+export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
+  const plugins = [
+    new HtmlWebpackPlugin({
+      template: paths.html
     }),
-    new webpack.ProgressPlugin(),
+    new ProgressPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[hash:8].css',
       chunkFilename: 'css/[name].[hash:8].css'
     }),
-    new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev),
-    }), 
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false
+    new DefinePlugin({
+      __IS_DEV__: JSON.stringify(isDev)
     })
   ]
+
+  if (isDev) {
+    plugins.push(new HotModuleReplacementPlugin())
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false
+      })
+    )
+  }
+  return plugins
 }
