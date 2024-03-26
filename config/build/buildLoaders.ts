@@ -69,5 +69,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     babelLoader, 
     typescriptLoader, 
     cssLoader
-];
+  ];
 }

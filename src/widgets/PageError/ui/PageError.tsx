@@ -1,5 +1,4 @@
 import {classNames} from '@/shared/lib/classNames/classNames'
-import styles from './PageError.module.scss'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/shared/ui/Button/Button'
 
@@ -13,7 +12,7 @@ export const PageError = ({className}: PageErrorProps) => {
     location.reload()
   }
   return (
-    <div className={classNames(styles.root, {}, [className])}>
+    <div className={classNames('', {}, [className])}>
       <p>{t('Something went wrong')}</p>
       <Button onClick={reloadPage}>
         {t('Reload page')}
