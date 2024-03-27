@@ -1,25 +1,23 @@
-import { useTranslation } from 'react-i18next'
-import { AppLink } from '@/shared/ui/AppLink/AppLink'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 import styles from './Navbar.module.scss'
+import { ProfileCard } from '@/widgets/ProfileCard'
+import Avatar from '@/shared/assets/avatar.jpg'
 
 interface NavbarProps {
   className?: string
 }
 
 export const Navbar = ({ className }: NavbarProps) => {
-  const { t } = useTranslation()
-
   return (
     <div className={classNames(styles.root, {}, [className])}>
-      <div className={styles.links}>
-        <AppLink to={'/about'}>
-          {t('About')}
-        </AppLink>
-        <AppLink to={'/'}>
-          {t('Main')}
-        </AppLink>
+      <div className={styles.wrapper}>
+        <ProfileCard
+          imgUrl={Avatar}
+          name={'@kous.takken'}
+          description={'Junior Js Developer'}
+          tags={['code', 'arm wrestling', 'bench press', 'powerlifting']}
+        />
       </div>
     </div>
   )

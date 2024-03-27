@@ -4,6 +4,7 @@ import { LangSwitcher } from '@/widgets/LangSwitcher'
 
 import styles from './Header.module.scss'
 import { useTranslation } from 'react-i18next'
+import { TextInput } from '@/shared/ui/TextInput/TextInput'
 
 interface HeaderProps {
   className?: string
@@ -12,10 +13,10 @@ interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
   const { t } = useTranslation()
   return (
-    <div className={classNames(styles.root, {}, [ className ])}>
+    <div className={classNames(styles.root, {}, [className])}>
       <span>{t('React App')}</span>
       <div className={styles.right}>
-        <input type='text' />
+        <TextInput placeholder={'Search'} />
         <ThemeSwitcher />
         <LangSwitcher />
       </div>
