@@ -17,7 +17,7 @@ export const ProfileCard: FC<ProfileCardPros> = (props) => {
   return (
     <div className={classNames(styles.root, {}, [])}>
       <div className={styles.hero}>
-        <img className={styles.img} src={imgUrl} />
+        <img className={styles.img} src={imgUrl} alt={name} />
       </div>
       <div className={styles.about}>
         <p>{name}</p>
@@ -25,7 +25,7 @@ export const ProfileCard: FC<ProfileCardPros> = (props) => {
       </div>
       <div className={styles.tags}>
         <p>{t('Tags')}</p>
-        <div className={styles.tagsList}>
+        <div className={styles.tagList}>
           {tags.map((item) => (
             <Badge theme={ThemeBadge.CLEAR} key={item}>
               {item}
