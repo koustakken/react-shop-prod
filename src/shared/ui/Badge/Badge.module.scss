@@ -1,0 +1,26 @@
+.root {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  width: fit-content;
+  border-radius: var(--btn-border-radius);
+}
+
+.clear {
+  border: 1px solid var(--border-default);
+}
+
+.hard {
+  border: 1px solid var(--github-milano);
+  color: var(--github-milano);
+}
+
+.medium {
+  border: 1px solid var(--github-tia);
+  color: var(--github-tia);
+}
+
+.light {
+  border: 1px solid var(--github-mantis);
+  color: var(--github-mantis);
+}

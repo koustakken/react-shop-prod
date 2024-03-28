@@ -1,14 +1,43 @@
 .button {
   cursor: pointer;
+  color: var(--btn-font-primary);
+  padding: 2px 8px;
+  border-radius: var(--btn-border-radius);
+  border: none;
+  font-size: var(--font-size-s);
+  font-weight: 500;
 
   svg {
     display: block;
+  }
+
+  &:hover {
+    filter: brightness(0.98);
   }
 }
 
 .clear {
   padding: 0;
-  border: none;
   background: none;
   outline: none;
+}
+
+.outlined {
+  border: 1px solid var(--border-default);
+  background: var(--inverted-bg-color);
+}
+
+.edit {
+  background: var(--blue);
+  color: var(--bg-color);
+}
+
+.submit {
+  background: var(--green);
+  color: var(--bg-color);
+}
+
+.cancel {
+  background: var(--github-milano);
+  color: var(--bg-color);
 }

@@ -4,6 +4,10 @@ import styles from './Button.module.scss'
 
 export enum ThemeButton {
   CLEAR = 'clear',
+  OUTLINED = 'outlined',
+  EDIT = 'edit',
+  SUBMIT = 'submit',
+  CANCEL = 'cancel'
 }
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
@@ -13,12 +17,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps & React.PropsWithChildren> = (
   props: ButtonProps
 ) => {
-  const {
-    className,
-    children,
-    theme,
-    ...otherProps
-  } = props
+  const { className, children, theme, ...otherProps } = props
   return (
     <button
       className={classNames(styles.button, {}, [className, styles[theme]])}

@@ -19,5 +19,13 @@
 
 .page-wrapper {
   flex-grow: 1;
-  padding: 20px 30px;
+  padding: 30px;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+}
+
+.main-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
