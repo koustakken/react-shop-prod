@@ -4,13 +4,14 @@ import styles from './Card.module.scss'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import Bookmark from '@/shared/assets/icons/bookmark.svg'
 import BookmarkFill from '@/shared/assets/icons/bookmark-fill.svg'
+import { Badge, ThemeBadge } from '@/shared/ui/Badge/Badge'
 
 interface CardProps {
   className?: string
   icon?: SVGAElement
   title: string
   type: string
-  description?: string
+  description: string
   plan: string
 }
 
@@ -20,6 +21,7 @@ export const Card: FC<CardProps> = (props) => {
   const onFavoriteClick = () => {
     setFavorite((prev) => !prev)
   }
+
   return (
     <div className={classNames(styles.root, {}, [className])}>
       <div className={styles.main}>
@@ -27,7 +29,7 @@ export const Card: FC<CardProps> = (props) => {
           {favorite ? <BookmarkFill /> : <Bookmark />}
         </Button>
         <p className={styles.title}>{title}</p>
-        <span className={styles.type}>{type}</span>
+        <Badge theme={ThemeBadge.CLEAR}>{type}</Badge>
       </div>
       <div className={styles.description}>
         <p>{description}</p>

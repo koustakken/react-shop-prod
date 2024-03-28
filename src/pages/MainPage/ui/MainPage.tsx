@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import ActivityCalendar from 'react-activity-calendar'
 import { Card } from '@/shared/ui/Card/Card'
 import styles from './MainPage.module.scss'
+import { LineGraph } from '@/widgets/LineGraph'
 
 const MainPage = () => {
   const { t } = useTranslation()
@@ -37,62 +38,60 @@ const MainPage = () => {
       id: 1,
       title: 'Bench Press',
       type: 'light',
+      description: 'First train after sickness',
       plan: 'SCC 4'
     },
     {
       id: 2,
       title: 'Bench Press',
       type: 'light',
+      description: '',
       plan: 'SCC 4'
     },
     {
       id: 3,
       title: 'Bench Press',
       type: 'light',
+      description: 'Three train after sickness',
       plan: 'SCC 4'
     },
     {
       id: 4,
       title: 'Bench Press',
-      type: 'light',
+      type: 'middle',
+      description: '',
       plan: 'SCC 4'
     },
     {
       id: 5,
       title: 'Bench Press',
-      type: 'light',
+      type: 'hard',
+      description: 'Filling good',
       plan: 'SCC 4'
     }
   ]
-  {
-    /*const records = [*/
-  }
-  {
-    /*  {*/
-  }
-  {
-    /*    name: 'Bench Press',*/
-  }
-  {
-    /*    value: '140 kg',*/
-  }
-  {
-    /*    year: '2023'*/
-  }
-  //   },
-  //   {
-  //     name: 'Squat',
-  {
-    /*    value: '150 kg',*/
-  }
-  //     year: '2023'
-  //   },
-  //   {
-  //     name: 'Deadlift',
-  //     value: '150 kg',
-  //     year: '2023'
-  //   }
-  // ]
+  const progressHistory = [
+    {
+      name: '2024/03/24',
+      value: 10
+    },
+    {
+      name: '2024/03/25',
+      value: 15
+    },
+    {
+      name: '2024/03/26',
+      value: 20
+    },
+    {
+      name: '2024/03/27',
+      value: 15
+    },
+    {
+      name: '2024/03/28',
+      value: 25
+    }
+  ]
   return (
     <div className="main-page-wrapper">
       <h1>{t('Activity')}</h1>
@@ -110,8 +109,9 @@ const MainPage = () => {
         />
       </div>
       <div className={styles.sectionWrapper}>
-        <div className={styles.section}>
+        <div className={styles.sectionProgress}>
           <h1>{t('Progress')}</h1>
+          <LineGraph data={progressHistory} />
         </div>
         <div className={styles.sectionHistory}>
           <h1>{t('History')}</h1>
@@ -121,6 +121,7 @@ const MainPage = () => {
               title={train.title}
               type={train.type}
               plan={train.plan}
+              description={train.description}
             />
           ))}
         </div>
