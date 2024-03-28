@@ -8,6 +8,7 @@ import { Navbar } from '@/widgets/Navbar'
 import { Header } from '@/widgets/Header'
 
 import './styles/index.scss'
+import { Footer } from '@/widgets/Footer'
 
 const App = () => {
   const { theme } = useTheme()
@@ -21,6 +22,7 @@ const App = () => {
           <AppRouter />
         </div>
       </Suspense>
+      <Footer />
     </div>
   )
 }

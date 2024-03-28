@@ -19,3 +19,15 @@
   gap: 20px;
   width: 100%;
 }
+
+.sectionHistoryInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHistoryEvents {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

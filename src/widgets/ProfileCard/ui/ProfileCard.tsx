@@ -3,6 +3,7 @@ import styles from './ProfileCard.module.scss'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Badge, ThemeBadge } from '@/shared/ui/Badge/Badge'
+import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 
 interface ProfileCardPros {
   imgUrl: string
@@ -22,6 +23,7 @@ export const ProfileCard: FC<ProfileCardPros> = (props) => {
       <div className={styles.about}>
         <p>{name}</p>
         <span>{description}</span>
+        <Button theme={ThemeButton.OUTLINED}>{t('Edit Profile')}</Button>
       </div>
       <div className={styles.tags}>
         <p>{t('Tags')}</p>

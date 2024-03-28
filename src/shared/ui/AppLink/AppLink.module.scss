@@ -1,11 +1,13 @@
 .root {
   text-decoration: none;
   color: var(--primary-color);
-  padding: 5px 10px;
-  font-size: var(--font-size-s);
-
+  font-size: var(--font-size-m);
+  padding-bottom: 4px;
   &:hover {
-    background-color: var(--inverted-bg-color);
-    border-radius: 5px;
+    border-bottom: 2px solid var(--blue);
   }
+}
+
+.active {
+  border-bottom: 2px solid var(--github-tia);
 }
