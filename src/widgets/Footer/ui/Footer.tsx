@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className={classNames(styles.footer)}>
       {/* eslint-disable-next-line i18next/no-literal-string */}
-      <p>made by @kous.takken with ❤️</p>
+      <p>made with ❤️ by @kous.takken </p>
     </footer>
   )
 }
