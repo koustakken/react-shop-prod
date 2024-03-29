@@ -1,0 +1,12 @@
+.root {
+  position: fixed;
+  width: 300px;
+  height: calc(100vh - var(--footer-height) - var(--header-height));
+  border-right: 1px solid var(--border-default);
+  background-color: var(--inverted-bg-color);
+  z-index: 1;
+}
+
+.collapsed {
+  display: none;
+}

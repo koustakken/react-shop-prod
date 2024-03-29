@@ -4,10 +4,11 @@ import { useTheme } from './providers/ThemeProvider'
 
 import { classNames } from '@/shared/lib/classNames/classNames'
 
-import { Navbar } from '@/widgets/Navbar'
 import { Header } from '@/widgets/Header'
 
 import './styles/index.scss'
+import { Footer } from '@/widgets/Footer'
+import { Sidebar } from '@/widgets/Sidebar'
 
 const App = () => {
   const { theme } = useTheme()
@@ -17,10 +18,11 @@ const App = () => {
       <Suspense fallback="">
         <Header />
         <div className={classNames('content')}>
-          <Navbar />
+          <Sidebar />
           <AppRouter />
         </div>
       </Suspense>
+      <Footer />
     </div>
   )
 }
