@@ -2,6 +2,12 @@
   padding: 20px 0;
 }
 
+.wrapper {
+  display: flex;
+}
+.sidebar {
+  position: fixed;
+}
 .sectionWrapper {
   display: flex;
 }

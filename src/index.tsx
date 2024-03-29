@@ -5,6 +5,7 @@ import { ErrorBoundary } from '@/app/providers/ErrorBoundary'
 import App from './app/App'
 
 import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { SidebarProvider } from '@/app/providers/SidebarProvider'
 import '@/shared/config/i18n/i18n'
 
 const container = document.getElementById('root')
@@ -14,7 +15,9 @@ root.render(
   <BrowserRouter>
     <ErrorBoundary>
       <ThemeProvider>
-        <App />
+        <SidebarProvider>
+          <App />
+        </SidebarProvider>
       </ThemeProvider>
     </ErrorBoundary>
   </BrowserRouter>

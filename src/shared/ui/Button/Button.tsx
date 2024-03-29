@@ -12,15 +12,19 @@ export enum ThemeButton {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   theme?: ThemeButton
+  block?: boolean
 }
 
 export const Button: FC<ButtonProps & React.PropsWithChildren> = (
   props: ButtonProps
 ) => {
-  const { className, children, theme, ...otherProps } = props
+  const { className, children, theme, block, ...otherProps } = props
+  const mods: Record<string, boolean> = {
+    [styles.block]: block
+  }
   return (
     <button
-      className={classNames(styles.button, {}, [className, styles[theme]])}
+      className={classNames(styles.button, mods, [className, styles[theme]])}
       {...otherProps}
     >
       {children}

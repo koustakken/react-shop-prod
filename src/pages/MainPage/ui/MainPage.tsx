@@ -5,6 +5,7 @@ import styles from './MainPage.module.scss'
 import { LineGraph } from '@/widgets/LineGraph'
 import { TextInput } from '@/shared/ui/TextInput/TextInput'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
+import { Navbar } from '@/widgets/Navbar'
 
 const MainPage = () => {
   const { t } = useTranslation()
@@ -75,63 +76,68 @@ const MainPage = () => {
   const progressHistory = [
     {
       name: '2024/03/24',
-      value: 10
+      value: 50
     },
     {
       name: '2024/03/25',
-      value: 15
+      value: 60
     },
     {
       name: '2024/03/26',
-      value: 20
+      value: 70
     },
     {
       name: '2024/03/27',
-      value: 15
+      value: 65
     },
     {
       name: '2024/03/28',
-      value: 25
+      value: 80
     }
   ]
   return (
-    <div className="main-page-wrapper">
-      <h1>{t('Activity')}</h1>
-      <div className={styles.activity}>
-        <ActivityCalendar
-          data={data}
-          theme={{
-            light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259']
-          }}
-          hideColorLegend={true}
-          blockSize={15}
-          blockRadius={4}
-          showWeekdayLabels={true}
-          weekStart={1}
-        />
+    <div className={styles.wrapper}>
+      <div className={styles.sidebar}>
+        <Navbar />
       </div>
-      <div className={styles.sectionWrapper}>
-        <div className={styles.sectionProgress}>
-          <h1>{t('Progress')}</h1>
-          <LineGraph data={progressHistory} />
+      <div className="main-page-wrapper">
+        <h1>{t('Activity')}</h1>
+        <div className={styles.activity}>
+          <ActivityCalendar
+            data={data}
+            theme={{
+              light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259']
+            }}
+            hideColorLegend={true}
+            blockSize={15}
+            blockRadius={4}
+            showWeekdayLabels={true}
+            weekStart={1}
+          />
         </div>
-        <div className={styles.sectionHistory}>
-          <div className={styles.sectionHistoryInfo}>
-            <h1>{t('History')}</h1>
-            <div className={styles.sectionHistoryEvents}>
-              <Button theme={ThemeButton.OUTLINED}>{t('Filter')}</Button>
-              <TextInput placeholder={'Search...'} />
-            </div>
+        <div className={styles.sectionWrapper}>
+          <div className={styles.sectionProgress}>
+            <h1>{t('Progress')}</h1>
+            <LineGraph data={progressHistory} />
           </div>
-          {history.map((train) => (
-            <Card
-              key={train.id}
-              title={train.title}
-              type={train.type}
-              plan={train.plan}
-              description={train.description}
-            />
-          ))}
+          <div className={styles.sectionHistory}>
+            <div className={styles.sectionHistoryInfo}>
+              <h1>{t('History')}</h1>
+              <div className={styles.sectionHistoryEvents}>
+                <Button theme={ThemeButton.OUTLINED}>{t('Filter')}</Button>
+                <TextInput placeholder={'Search...'} />
+              </div>
+            </div>
+            {history.map((train) => (
+              <Card
+                key={train.id}
+                title={train.title}
+                type={train.type}
+                plan={train.plan}
+                description={train.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
