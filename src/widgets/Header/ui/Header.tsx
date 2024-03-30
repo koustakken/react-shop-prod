@@ -6,19 +6,21 @@ import styles from './Header.module.scss'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import Hamburger from '@/shared/assets/icons/hamburger.svg'
 import { useSidebar } from '@/app/providers/SidebarProvider'
+import { useLocation } from 'react-router-dom'
 
 interface HeaderProps {
   className?: string
 }
 
 export const Header = ({ className }: HeaderProps) => {
+  const menuVisible = useLocation().pathname === '/'
   const { toggleSidebar } = useSidebar()
   return (
     <div className={classNames(styles.root, {}, [className])}>
       <div className={styles.logo}>
-        <Button theme={ThemeButton.OUTLINED} onClick={toggleSidebar} block>
+        {!menuVisible && <Button theme={ThemeButton.OUTLINED} onClick={toggleSidebar} block>
           <Hamburger />
-        </Button>
+        </Button>}
         {/* eslint-disable-next-line i18next/no-literal-string */}
         <p>Weight</p>
         {/* eslint-disable-next-line i18next/no-literal-string */}

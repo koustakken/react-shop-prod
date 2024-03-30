@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "test",
+      "password": "Test1234"
+    }
+  ],
+  "trainings": [
+    {
+      "id": 1,
+      "date": "2024-03-29",
+      "title": "Bench Press",
+      "type": "hard",
+      "plan": "SCC 3",
+      "exercises": [
+        {
+          "name": "Bench press",
+          "value": "80",
+          "reps": "2",
+          "sets": "2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2024-03-28",
+      "title": "Bench Press",
+      "type": "light",
+      "plan": "SCC 3",
+      "exercises": [
+        {
+          "name": "Bench press",
+          "value": "50",
+          "reps": "5",
+          "sets": "5"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "2024-03-27",
+      "title": "Bench Press",
+      "type": "middle",
+      "plan": "SCC 3",
+      "exercises": [
+        {
+          "name": "Bench press",
+          "value": "70",
+          "reps": "3",
+          "sets": "3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "date": "2024-03-26",
+      "title": "Bench Press",
+      "type": "light",
+      "plan": "SCC 3",
+      "exercises": [
+        {
+          "name": "Bench press",
+          "value": "60",
+          "reps": "5",
+          "sets": "4"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "date": "2023-03-25",
+      "title": "Bench Press",
+      "type": "light",
+      "plan": "SCC 3",
+      "exercises": [
+        {
+          "name": "Bench press",
+          "value": "50",
+          "reps": "5",
+          "sets": "5"
+        }
+      ]
+    }
+  ]
+}

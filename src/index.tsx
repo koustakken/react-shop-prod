@@ -12,13 +12,15 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 
 root.render(
-  <BrowserRouter>
-    <ErrorBoundary>
-      <ThemeProvider>
-        <SidebarProvider>
-          <App />
-        </SidebarProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  </BrowserRouter>
+  <SidebarProvider>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <SidebarProvider>
+            <App />
+          </SidebarProvider>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </SidebarProvider>
 )

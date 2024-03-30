@@ -6,6 +6,7 @@ import { LineGraph } from '@/widgets/LineGraph'
 import { TextInput } from '@/shared/ui/TextInput/TextInput'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import { Navbar } from '@/widgets/Navbar'
+import { Sidebar } from '@/widgets/Sidebar'
 
 const MainPage = () => {
   const { t } = useTranslation()
@@ -98,6 +99,7 @@ const MainPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.sidebar}>
+        <Sidebar />
         <Navbar />
       </div>
       <div className="main-page-wrapper">
@@ -106,7 +108,8 @@ const MainPage = () => {
           <ActivityCalendar
             data={data}
             theme={{
-              light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259']
+              light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
+              dark: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259']
             }}
             hideColorLegend={true}
             blockSize={15}
