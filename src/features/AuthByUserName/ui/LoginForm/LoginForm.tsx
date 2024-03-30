@@ -5,13 +5,13 @@ import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import { Input } from '@/shared/ui/Input/Input'
 
 interface LoginFormProps {
-
+  className?: string
 }
 
-export const LoginForm = (props: LoginFormProps) => {
+export const LoginForm = ({className}: LoginFormProps) => {
   const {t} = useTranslation()
   return (
-    <div className={classNames(styles.root, {}, [])}>
+    <div className={classNames(styles.root, {}, [className])}>
       {/* eslint-disable-next-line i18next/no-literal-string */}
       <h1>{t('Authorization')}</h1>
       <div className={styles.inputs}>
