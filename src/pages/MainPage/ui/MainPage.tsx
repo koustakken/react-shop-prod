@@ -108,7 +108,8 @@ const MainPage = () => {
           <ActivityCalendar
             data={data}
             theme={{
-              light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259']
+              light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
+              dark: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259']
             }}
             hideColorLegend={true}
             blockSize={15}
