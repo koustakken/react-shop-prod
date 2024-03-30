@@ -12,9 +12,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, { re
   async ({ username, password }, thunkAPI) => {
     try {
       const res = await axios.post<User>('http://localhost:8000/login', { username, password })
-      if (!res.data) {
-        throw new Error()
-      }
       return res.data
     } catch (e) {
       console.log(e)
