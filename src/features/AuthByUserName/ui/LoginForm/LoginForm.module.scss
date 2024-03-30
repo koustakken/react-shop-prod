@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--btn-border-radius);
+  padding: 40px 30px 20px;
+
+  h1 {
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0 auto;
+    cursor: pointer;
+    color: var(--primary-color);
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+}

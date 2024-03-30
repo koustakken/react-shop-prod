@@ -13,7 +13,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ className }: HeaderProps) => {
-  const menuVisible = useLocation().pathname === '/'
+  const menuVisible = useLocation().pathname === '/' || '/auth'
   const { toggleSidebar } = useSidebar()
   return (
     <div className={classNames(styles.root, {}, [className])}>
