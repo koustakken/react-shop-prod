@@ -26,6 +26,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  span {
+    color: var(--github-milano);
+  }
 }
 
 .btns {

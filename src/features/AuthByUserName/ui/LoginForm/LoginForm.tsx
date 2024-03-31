@@ -19,7 +19,7 @@ interface LoginFormProps {
 export const LoginForm = memo(({className}: LoginFormProps) => {
   const {t} = useTranslation()
   const dispatch = useDispatch()
-  const {username, password} = useSelector(getLoginState)
+  const {username, password, isLoading, error} = useSelector(getLoginState)
 
   const onChangeUsername = useCallback((value: string) => {
     dispatch(loginActions.setUsername(value))
@@ -50,11 +50,13 @@ export const LoginForm = memo(({className}: LoginFormProps) => {
           onChange={onChangePassword}
           value={password}
         />
+        {error && <span>{t('Invalid username or password')}</span>}
       </div>
       <div className={styles.btns}>
         <Button
           theme={ThemeButton.EDIT}
           onClick={onLoginClick}
+          disabled={isLoading}
         >
           {t('Login')}
         </Button>

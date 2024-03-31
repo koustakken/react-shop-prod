@@ -3,10 +3,10 @@ import ActivityCalendar from 'react-activity-calendar'
 import { Card } from '@/shared/ui/Card/Card'
 import styles from './MainPage.module.scss'
 import { LineGraph } from '@/widgets/LineGraph'
-import { TextInput } from '@/shared/ui/TextInput/TextInput'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import { Navbar } from '@/widgets/Navbar'
 import { Sidebar } from '@/widgets/Sidebar'
+import { Input } from '@/shared/ui/Input/Input'
 
 const MainPage = () => {
   const { t } = useTranslation()
@@ -128,7 +128,7 @@ const MainPage = () => {
               <h1>{t('History')}</h1>
               <div className={styles.sectionHistoryEvents}>
                 <Button theme={ThemeButton.OUTLINED}>{t('Filter')}</Button>
-                <TextInput placeholder={'Search...'} />
+                <Input placeholder={'Search'}/>
               </div>
             </div>
             {history.map((train) => (

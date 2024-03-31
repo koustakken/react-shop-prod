@@ -1,8 +1,14 @@
 {
+    "en":  "en",
+    "ru":  "ru",
     "Main page": "Главная страница",
     "About page" : "О сайте",
     "Main": "Главная",
     "About": "О сайте",
     "Page not found ;(": "Страница не найдена ;(",
-    "Welcome Page": "Добро пожаловать"
+    "Welcome Page": "Добро пожаловать",
+    "Authorization" : "Авторизация",
+    "Login": "Вход",
+    "Register": "Регистрация",
+    "Forgot password? \uD83E\uDD37\u200D♂\uFE0F": "Забыли пароль? \uD83E\uDD37\u200D♂\uFE0F"
 }

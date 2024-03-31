@@ -26,7 +26,8 @@ export const loginSlice = createSlice({
         state.error = undefined
         state.isLoading = true
       })
-      .addCase(loginByUsername.fulfilled, (state) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      .addCase(loginByUsername.fulfilled, (state, action) => {
         state.isLoading = false
       })
       .addCase(loginByUsername.rejected, (state, action) => {
