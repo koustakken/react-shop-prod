@@ -3,5 +3,11 @@
     "About page" : "About page",
     "Main": "Main",
     "About": "About",
-    "Page not found ;(": "Page not found ;("
+    "Page not found ;(": "Page not found ;(",
+    "en":  "en",
+    "ru":  "ru",
+    "Authorization" : "Авторизация",
+    "Login": "Login",
+    "Register": "Register",
+    "Forgot password? \uD83E\uDD37\u200D♂\uFE0F": "Forgot password? \uD83E\uDD37\u200D♂\uFE0F"
 }

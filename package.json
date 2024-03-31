@@ -14,7 +14,8 @@
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -84,6 +85,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",
+    "axios": "^1.6.8",
     "i18next": "^23.10.1",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.5.0",
