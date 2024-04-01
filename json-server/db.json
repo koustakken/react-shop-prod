@@ -12,7 +12,9 @@
       "email": "kous.takken@gmail.com",
       "user_tag": "@kous.takken",
       "description": "Junior Js Developer",
-      "tags": ["code", "powerlifting", "armwrestling", "bench press"]
+      "tags": ["code", "powerlifting", "armwrestling", "bench press"],
+      "weight": "77",
+      "height": "177"
     }
   ],
   "trainings": [
