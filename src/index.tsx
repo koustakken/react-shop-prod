@@ -13,9 +13,9 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 
 root.render(
-  <StoreProvider>
-    <SidebarProvider>
-      <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
+      <SidebarProvider>
         <ErrorBoundary>
           <ThemeProvider>
             <SidebarProvider>
@@ -23,7 +23,7 @@ root.render(
             </SidebarProvider>
           </ThemeProvider>
         </ErrorBoundary>
-      </BrowserRouter>
-    </SidebarProvider>
-  </StoreProvider>
+      </SidebarProvider>
+    </StoreProvider>
+  </BrowserRouter>
 )

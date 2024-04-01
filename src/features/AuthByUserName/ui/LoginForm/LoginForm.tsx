@@ -17,8 +17,6 @@ import { getLoginPassword } from '@/features/AuthByUserName/model/selectors/getL
 import { getLoginIsLoading } from '@/features/AuthByUserName/model/selectors/getLoginIsLoading/getLoginIsLoading'
 import { getLoginError } from '@/features/AuthByUserName/model/selectors/getLoginError/getLoginError'
 
-import { useNavigate } from 'react-router-dom'
-
 interface LoginFormProps {
   className?: string
 }
@@ -31,7 +29,6 @@ const initialReducers: ReducerList = {
 const LoginForm = memo(({className}: LoginFormProps) => {
   const {t} = useTranslation()
   const dispatch = useAppDispatch()
-  const navigate = useNavigate()
 
   const username = useSelector(getLoginUsername)
   const password = useSelector(getLoginPassword)
@@ -48,11 +45,8 @@ const LoginForm = memo(({className}: LoginFormProps) => {
 
   const onLoginClick = useCallback(async () => {
     // @ts-ignore
-    const result = await dispatch(loginByUsername({ username, password }))
-    if (result.meta.requestStatus === 'fulfilled') {
-      navigate('/main')
-    }
-  }, [dispatch, username, password, navigate])
+    await dispatch(loginByUsername({ username, password }))
+  }, [dispatch, username, password])
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
