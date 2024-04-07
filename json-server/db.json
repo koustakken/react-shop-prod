@@ -6,17 +6,17 @@
       "password": "test"
     }
   ],
-  "profiles": [
+  "profile":
     {
-      "user_id": "1d12048h1204f9",
+      "userId": "1d12048h1204f9",
       "email": "kous.takken@gmail.com",
-      "user_tag": "@kous.takken",
+      "userTag": "@kous.takken",
       "description": "Junior Js Developer",
       "tags": ["code", "powerlifting", "armwrestling", "bench press"],
       "weight": "77",
       "height": "177"
     }
-  ],
+  ,
   "trainings": [
     {
       "id": 1,

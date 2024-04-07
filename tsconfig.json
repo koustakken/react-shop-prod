@@ -12,6 +12,7 @@
         "allowSyntheticDefaultImports": true,
         // for absolute imports
         "baseUrl": ".",
+//        "strict": true,
         "paths": {
             "@/*": ["./src/*"]
         },

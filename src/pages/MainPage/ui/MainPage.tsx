@@ -4,17 +4,25 @@ import { Card } from '@/shared/ui/Card/Card'
 import styles from './MainPage.module.scss'
 import { LineGraph } from '@/widgets/LineGraph'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
-import { Navbar } from '@/widgets/Navbar'
 import { Sidebar } from '@/widgets/Sidebar'
 import { Input } from '@/shared/ui/Input/Input'
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { profileReducer } from '@/entities/Profile'
+import { fetchProfileData, profileReducer, ProfileCard } from '@/entities/Profile'
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch'
+import { useEffect } from 'react'
+import Avatar from '@/shared/assets/avatar.jpg'
 
 const reducers: ReducerList = {
   profile: profileReducer
 }
 const MainPage = () => {
   const { t } = useTranslation()
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProfileData())
+  }, [dispatch])
+
   const data = [
     {
       date: '2024-03-27',
@@ -106,7 +114,7 @@ const MainPage = () => {
       <div className={styles.wrapper}>
         <div className={styles.sidebar}>
           <Sidebar />
-          <Navbar />
+          <ProfileCard className={styles.profile} imgUrl={Avatar} />
         </div>
         <div className="main-page-wrapper">
           <h1>{t('Activity')}</h1>
