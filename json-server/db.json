@@ -2,10 +2,21 @@
   "users": [
     {
       "id": "1d12048h1204f9",
-      "username": "test",
-      "password": "Test1234"
+      "username": "kous",
+      "password": "test"
     }
   ],
+  "profile":
+    {
+      "userId": "1d12048h1204f9",
+      "email": "kous.takken@gmail.com",
+      "userTag": "@kous.takken",
+      "description": "Junior Js Developer",
+      "tags": ["code", "powerlifting", "armwrestling", "bench press"],
+      "weight": "77",
+      "height": "177"
+    }
+  ,
   "trainings": [
     {
       "id": 1,
