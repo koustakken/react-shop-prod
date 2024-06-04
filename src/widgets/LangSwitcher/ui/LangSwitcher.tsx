@@ -12,11 +12,12 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
   const langHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     i18n.changeLanguage(e.target.value)
   }
+  const defaultValue = localStorage.getItem('i18nextLng')
   return (
     <select
       onChange={langHandler}
       className={classNames(styles.root, {}, [className])}
-      defaultValue="en"
+      defaultValue={defaultValue}
     >
       <option value="en">{t('en')}</option>
       <option value="ru">{t('ru')}</option>
