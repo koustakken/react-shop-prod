@@ -3,3 +3,4 @@ dist
 extractedTranslations
 .idea
 *storybook.log
+storybook-static

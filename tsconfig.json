@@ -1,38 +1,40 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "noImplicitAny": true,
-        "module": "esnext",
-        "target": "es5",
-        "jsx": "react-jsx",
-        "allowJs": true,
-        "moduleResolution": "node",
-        // 
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        // for absolute imports
-        "baseUrl": ".",
-//        "strict": true,
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        // "strictNullChecks": false
-        "types": [
-            "jest",
-            "node",
-//            "@testing-library/jest-dom"
-        ]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    //
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // for absolute imports
+    "baseUrl": ".",
+    //        "strict": true,
+    "paths": {
+      "@/*": ["./src/*"]
     },
-    "ts-node": {
-        "compilerOptions": {
-          "module": "CommonJS"
-        }
-      },
-    "include": [
-        "./config/jest/setupTests.ts",
-        "./src/**/*.ts",
-        "./src/**/*.tsx",
-        "./config/storybook",
-        "./webpack.config.ts"
-    ],
+    // "strictNullChecks": false
+    "types": [
+      "jest",
+      "node"
+      //            "@testing-library/jest-dom"
+    ]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./config/storybook",
+    "./webpack.config.ts"
+  ],
+  "exclude": ["node_modules"]
 }
